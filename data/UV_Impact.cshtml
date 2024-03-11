@@ -1,0 +1,642 @@
+﻿
+@{
+    ViewBag.Title = "Impacts of UV Radiation";
+}
+
+<!-- Style -->
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+    }
+
+    ul {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #04AA6D;
+    }
+
+        .button1:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+    .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+    }
+
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+</style>
+
+<!-- Import d3 library -->
+<script src="//d3js.org/d3.v4.min.js"></script>
+
+<!-- Script to reveal specific text -->
+<!-- Toggles visibility of all elements specified by id -->
+<script>
+    function showAns() {
+        var x = document.getElementById("ans1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("seeAnsButton");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        var z = document.getElementById("seeAnsRadButton");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+        var w = document.getElementById("icantell");
+        if (w.style.display === "none") {
+            w.style.display = "block";
+        } else {
+            w.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Script to reveal specific text -->
+<!-- Toggles visibility of all elements specified by id -->
+<script>
+    function showAnsRad() {
+        var x = document.getElementById("rad1");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("rad2");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        var z = document.getElementById("rad3");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+        var b = document.getElementById("seeAnsRadButton");
+        if (b.style.display === "none") {
+            b.style.display = "block";
+        } else {
+            b.style.display = "none";
+        }
+        var v = document.getElementById("getsun");
+        if (v.style.display === "none") {
+            v.style.display = "block";
+        } else {
+            v.style.display = "none";
+        }
+        var w = document.getElementById("showAnsSunButton");
+        if (w.style.display === "none") {
+            w.style.display = "block";
+        } else {
+            w.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Script to reveal specific text -->
+<!-- Toggles visibility of all elements specified by id -->
+<script>
+    function showAnsSun() {
+        var x = document.getElementById("showAnsSunButton");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("getsun1");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        var z = document.getElementById("sundanger");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+        var b = document.getElementById("showDangerButton");
+        if (b.style.display === "none") {
+            b.style.display = "block";
+        } else {
+            b.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Script to reveal specific text -->
+<!-- Toggles visibility of all elements specified by id -->
+<script>
+    function showAnsDanger() {
+        var x = document.getElementById("showDangerButton");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("sundanger1");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        var z = document.getElementById("sundanger2");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+        var m = document.getElementById("sundanger3");
+        if (m.style.display === "none") {
+            m.style.display = "block";
+        } else {
+            m.style.display = "none";
+        }
+        var n = document.getElementById("uv-melb");
+        if (n.style.display === "none") {
+            n.style.display = "block";
+        } else {
+            n.style.display = "none";
+        }
+        var k = document.getElementById("rates");
+        if (k.style.display === "none") {
+            k.style.display = "block";
+        } else {
+            k.style.display = "none";
+        }
+        var j = document.getElementById("showRatesButton");
+        if (j.style.display === "none") {
+            j.style.display = "block";
+        } else {
+            j.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Script to reveal specific text -->
+<!-- Toggles visibility of all elements specified by id -->
+<script>
+    function showAnsRates() {
+        var x = document.getElementById("showRatesButton");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+        var y = document.getElementById("rates1");
+        if (y.style.display === "none") {
+            y.style.display = "block";
+        } else {
+            y.style.display = "none";
+        }
+        var z = document.getElementById("rates2");
+        if (z.style.display === "none") {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+        var m = document.getElementById("rates3");
+        if (m.style.display === "none") {
+            m.style.display = "block";
+        } else {
+            m.style.display = "none";
+        }
+        var n = document.getElementById("my_dataviz");
+        if (n.style.display === "none") {
+            n.style.display = "block";
+        } else {
+            n.style.display = "none";
+        }
+        var l = document.getElementById("demo");
+        if (l.style.display === "none") {
+            l.style.display = "block";
+        } else {
+            l.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Main body elements (text and diagrams) -->
+<body>
+
+    <!-- Main heading and hook -->
+    <h1> Impacts of UV Radiation - Crash Course </h1>
+
+    <h2> These 100 people all have melanoma... </h2>
+
+    <img class="center" src="https://raw.githubusercontent.com/vngo8/data-resources/main/images/100-people.png" alt="img unavailable" />
+
+    <h2> ...guess how many were caused by UV radiation? </h2>
+    <!-- Button to show answer and display next hook -->
+    <button class="button button1" id="seeAnsButton" onclick="showAns()"> Think of a number from 0-100. Then compare your answer... </button>
+
+    <p id="ans1" style="display: none">
+        According to the Cancer Council, <b> 95 out of 100 melanomas are caused by exposure to UV radiation. </b>
+        If that number shocks you then brace yourself because the main thing to keep in mind about sun safety is:
+        many 'common-sense' intuitions don't match up with the facts.
+    </p>
+
+    <h3 id="icantell" style="display: none"> <i> "I can tell how much UV there is from the heat and looking at the Sun..." </i> </h3>
+    <!-- Button to show answer and display next hook -->
+    <button class="button button1" id="seeAnsRadButton" onclick="showAnsRad()" style="display: none"> Fact or Fiction? </button>
+
+    <p id="rad1" style="display: none">
+        <b>FICTION.</b> The Sun emits 3 different types of radiation:
+        <ul id="rad2" style="display: none">
+            <li> Visible light is the radiation that we can see to tell how bright the day is. </li>
+            <li> Infrared is radiation that we feel as heat but can't see. </li>
+            <li>
+                The last and most damaging kind of radiation to the skin is ultraviolet (UV) and is
+                <b> particularly dangerous because we can't see or feel it. </b>
+            </li>
+        </ul>
+    </p>
+    <p id="rad3" style="display: none">
+        So the most reliable way to get a sense of the amount of UV
+        at a particular time is to <b> <i> check the UV index </i> </b> from a trusted weather news source.
+    </p>
+
+    <h3 id="getsun" style="display: none"> <i> "Getting sun is just a part of Aussie life - it's not harmful unless I get sunburnt." </i> </h3>
+    <!-- Button to show answer and display next hook -->
+    <button class="button button1" id="showAnsSunButton" onclick="showAnsSun()" style="display: none"> Fact or Fiction? </button>
+
+    <p id="getsun1" style="display: none">
+        <b> FICTION. </b> UV is dangerous not only because it is invisible, but also because <b> the damage it causes is invisible - until it's too late. </b>
+        Many skin cancer incidences that appear in adulthood are actually rooted in early childhood. While sunburns are a clear
+        sign of damage, UV can cause damage even if there are no visible indicators. While getting some sun is okay, getting UV is not -
+        so remember to protect yourself from UV when heading outside!
+    </p>
+
+    <h3 id="sundanger" style="display: none"> <i> "The sun is as dangerous now as it was 100 years ago, so I'll be fine..." </i> </h3>
+    <!-- Button to show answer and display next hook -->
+    <button class="button button1" id="showDangerButton" onclick="showAnsDanger()" style="display: none"> Fact or Fiction? </button>
+
+    <p id="sundanger1" style="display: none"> <b> A LITTLE BIT OF BOTH.</b> In some ways, this statement is true. Take a look at the chart below showing the highest monthly UV index in Melbourne from 2007 to 2022. </p>
+
+    <!-- Melbourne UV history visualization -->
+    <div id="uv-melb" style="display: none"> </div>
+
+    <p id="sundanger2" style="display: none">
+        Doesn't look like it's getting worse, right? But there are a few
+        things to keep in mind. Relative to the rest of the world, the protective ozone layer above Australia is quite thin, which means more UV radiation
+        can get through. According to data from the World Health Organization (WHO) from 2004, the average amount of yearly UV radiation you get in Australia
+        is:
+    </p>
+
+    <ul id="sundanger3" style="display: none">
+        <li> Over 3 times what you would get living in Iceland </li>
+        <li> Over 2 times what you would get living in the UK </li>
+        <li> About 1.7 times what you would get living in France or Germany </li>
+        <li> About 1.2 times what you would get living in the US or China </li>
+    </ul>
+
+    <h3 id="rates" style="display: none"> <i> "Wait, the UV levels aren't rising. So that means skin cancer rates shouldn't be rising too much either, right?'" </i> </h3>
+    <!-- Button to show answer and display next hook -->
+    <button class="button button1" id="showRatesButton" onclick="showAnsRates()" style="display: none"> Fact or Fiction? </button>
+
+    <p id="rates1" style="display: none">
+        <b>FICTION.</b> In addition to modern lifestyles, with climate change the protective ozone layer is also becoming weaker so it should come as no suprise that the incidence rates
+        for skin cancer in Victoria are actually increasing. The line below illustrates the number of diagnosed
+        skin cancer incidences in Victoria alone between 1982 and 2019.
+    </p>
+
+    <!-- Create a div where the skin cancer incidence graph will take place -->
+    <div id="my_dataviz" style="display: none"> </div>
+
+    <p id="rates2" style="display: none">
+        A good way to think about UV damage is that it works on a countdown timer.
+    </p>
+
+    <!-- Countdown timer -->
+    <p id="demo" style="display: none; text-align: center; font-size: 28px"></p>
+
+    <p id="rates3" style="display: none">
+        <b><i> The timer runs down when you're exposed to UV </i></b> so the damage adds up
+        over time - there is no one day that causes skin cancer.
+        That's why it is important to take appropriate precautions every day.
+    </p>
+
+    <p style="color: blue"> @Html.ActionLink("Find out about today's UV index in your area and recommended protection", "Index", "Home", new { area = "" }, new { @class = "nav-link" }) </p>
+    <p style="color: blue"> Learn more about UV precautions </p>
+
+</body>
+
+<!-- Script to generate skin cancer incidences line graph -->
+<script>
+
+    // set the dimensions and margins of the graph
+    var margin1 = { top: 10, right: 270, bottom: 30, left: 300 },
+        width1 = 940 - margin1.left - margin1.right,
+        height1 = 400 - margin1.top - margin1.bottom;
+
+    // append the svg object to the body of the page
+    var svg1 = d3.select("#my_dataviz")
+        .append("svg")
+        .attr("width", width1 + margin1.left + margin1.right)
+        .attr("height", height1 + margin1.top + margin1.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin1.left + "," + margin1.top + ")");
+
+    //Read the data
+    d3.csv("https://raw.githubusercontent.com/vngo8/data-resources/main/data/df_incidence_vic.csv",
+
+        // When reading the csv, I must format variables:
+        function (d) {
+            return { date: d3.timeParse("%Y")(d.date), value: d.value }
+        },
+
+        // Now I can use this dataset:
+        function (data) {
+
+            // Add X axis --> it is a date format
+            var x = d3.scaleTime()
+                .domain(d3.extent(data, function (d) { return d.date; }))
+                .range([0, width1]);
+            svg1.append("g")
+                .attr("transform", "translate(0," + height1 + ")")
+                .call(d3.axisBottom(x));
+
+            // Add Y axis
+            var y = d3.scaleLinear()
+                .domain([0, d3.max(data, function (d) { return +d.value; })])
+                .range([height1, 0]);
+            svg1.append("g")
+                .call(d3.axisLeft(y));
+
+            // This allows to find the closest X index of the mouse:
+            var bisect = d3.bisector(function (d) { return d.date; }).left;
+
+            // Create the circle that travels along the curve of chart
+            var focus = svg1
+                .append('g')
+                .append('circle')
+                .style("fill", "none")
+                .attr("stroke", "black")
+                .attr('r', 8.5)
+                .style("opacity", 0)
+
+            // Create the text that travels along the curve of chart
+            var focusText = svg1
+                .append('g')
+                .append('text')
+                .style("opacity", 0)
+                .attr("text-anchor", "left")
+                .attr("alignment-baseline", "middle")
+
+            // Add the line
+            svg1.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x(function (d) { return x(d.date) })
+                    .y(function (d) { return y(d.value) })
+                )
+
+            // Create a rect on top of the svg area: this rectangle recovers mouse position
+            svg1
+                .append('rect')
+                .style("fill", "none")
+                .style("pointer-events", "all")
+                .attr('width', width1)
+                .attr('height', height1)
+                .on('mouseover', mouseover)
+                .on('mousemove', mousemove)
+                .on('mouseout', mouseout);
+
+            // What happens when the mouse move -> show the annotations at the right positions.
+            function mouseover() {
+                focus.style("opacity", 1)
+                focusText.style("opacity", 1)
+            }
+
+            function mousemove() {
+                // recover coordinate we need
+                var x0 = x.invert(d3.mouse(this)[0]);
+                var i = bisect(data, x0, 1);
+                selectedData = data[i]
+                formatTime = d3.timeFormat("%Y")
+                selectedDate = formatTime(selectedData.date)
+                focus
+                    .attr("cx", x(selectedData.date))
+                    .attr("cy", y(selectedData.value))
+                focusText
+                    .html(selectedDate + ": " + selectedData.value)
+                    .attr("x", x(selectedData.date) + 15)
+                    .attr("y", y(selectedData.value))
+            }
+            function mouseout() {
+                focus.style("opacity", 0)
+                focusText.style("opacity", 0)
+            }
+        })
+</script>
+
+<!-- Script for UV chart in Melbourne -->
+<script>
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 270, bottom: 30, left: 300 },
+        width = 940 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#uv-melb")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    //Read the data
+    d3.csv("https://raw.githubusercontent.com/vngo8/data-resources/main/data/df_UVmax.csv",
+
+        // When reading the csv, I must format variables:
+        function (d) {
+            return { date: d3.timeParse("%Y-%b")(d.date), value: d.value }
+        },
+
+        // Now I can use this dataset:
+        function (data) {
+
+            // Add X axis --> it is a date format
+            var x = d3.scaleTime()
+                .domain(d3.extent(data, function (d) { return d.date; }))
+                .range([0, width]);
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            // Add Y axis
+            var y = d3.scaleLinear()
+                .domain([0, d3.max(data, function (d) { return +d.value; })])
+                .range([height, 0]);
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // This allows to find the closest X index of the mouse:
+            var bisect = d3.bisector(function (d) { return d.date; }).left;
+
+            // Create the circle that travels along the curve of chart
+            var focus = svg
+                .append('g')
+                .append('circle')
+                .style("fill", "none")
+                .attr("stroke", "black")
+                .attr('r', 8.5)
+                .style("opacity", 0)
+
+            // Create the text that travels along the curve of chart
+            var focusText = svg
+                .append('g')
+                .append('text')
+                .style("opacity", 0)
+                .attr("text-anchor", "left")
+                .attr("alignment-baseline", "middle")
+
+            // Add the line
+            svg.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "steelblue")
+                .attr("stroke-width", 1.5)
+                .attr("d", d3.line()
+                    .x(function (d) { return x(d.date) })
+                    .y(function (d) { return y(d.value) })
+                )
+
+            // Create a rect on top of the svg area: this rectangle recovers mouse position
+            svg
+                .append('rect')
+                .style("fill", "none")
+                .style("pointer-events", "all")
+                .attr('width', width)
+                .attr('height', height)
+                .on('mouseover', mouseover)
+                .on('mousemove', mousemove)
+                .on('mouseout', mouseout);
+
+            // What happens when the mouse move -> show the annotations at the right positions.
+            function mouseover() {
+                focus.style("opacity", 1)
+                focusText.style("opacity", 1)
+            }
+
+            function mousemove() {
+                // recover coordinate we need
+                var x0 = x.invert(d3.mouse(this)[0]);
+                var i = bisect(data, x0, 1);
+                selectedData = data[i]
+                formatTime = d3.timeFormat("%b-%Y")
+                selectedDate = formatTime(selectedData.date)
+                focus
+                    .attr("cx", x(selectedData.date))
+                    .attr("cy", y(selectedData.value))
+                focusText
+                    .html(selectedDate + " - UV index: " + selectedData.value)
+                    .attr("x", x(selectedData.date) + 15)
+                    .attr("y", y(selectedData.value))
+            }
+            function mouseout() {
+                focus.style("opacity", 0)
+                focusText.style("opacity", 0)
+            }
+        })
+</script>
+
+<!-- Script to create countdown timer -->
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2025 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
