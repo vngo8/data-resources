@@ -1,0 +1,702 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    margin-bottom: 40px; /* Adjust the value to the desired spacing */
+}
+
+.flex-item-left {
+    flex: 0 0 auto; /* Do not grow, do not shrink, initial basis auto */
+    margin-right: 20px; /* Add some space between the image and text content */
+}
+
+.flex-item-right {
+    flex: 1; /* Take up the remaining space */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+.read-more-goto {
+    position:center;
+    align-content:center;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff0000ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.read-more-goto:hover {
+    background-color: #ff000075;
+}
+
+
+/* Code generated from figma*/
+/* UV Index - Detailed */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+/* Rectangle 3 */
+position: absolute;
+width: 1440px;
+height: 89px;
+left: 0px;
+top: 0px;
+
+background: #01003D;
+/* SUN PROTECTION
+ */
+position: absolute;
+width: 223px;
+height: 36px;
+left: 40px;
+top: 13px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFD2D2;
+/* UV INDEX */
+position: absolute;
+width: 595px;
+height: 33px;
+left: 42px;
+top: 155px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 48px;
+
+color: #000000;
+/* UV PROTECTION */
+position: absolute;
+width: 216px;
+height: 33px;
+left: 638px;
+top: 55px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+/* UV IMPACT */
+position: absolute;
+width: 216px;
+height: 33px;
+left: 854px;
+top: 55px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+/* UV INDEX */
+position: absolute;
+width: 216px;
+height: 33px;
+left: 480px;
+top: 55px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+/* VICTORIA */
+position: absolute;
+width: 230px;
+height: 52px;
+left: 40px;
+top: 30px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 44px;
+line-height: 53px;
+
+color: #FFD2D2;
+/* Rectangle 1 */
+box-sizing: border-box;
+
+position: absolute;
+width: 1337px;
+height: 621px;
+left: 40px;
+top: 305px;
+
+background: #FFFFFF;
+border: 1px solid #CACACA;
+/* Screenshot 2024-03-07 at 2.46 1 */
+position: absolute;
+width: 883px;
+height: 595px;
+left: 58px;
+top: 319px;
+
+background: url(Screenshot 2024-03-07 at 2.46.png);
+/* Screenshot 2024-03-04 at 10.20 1 */
+position: absolute;
+width: 103px;
+height: 295px;
+left: 820px;
+top: 337px;
+
+background: url(Screenshot 2024-03-04 at 10.20.png);
+/* Rectangle 2 */
+position: absolute;
+width: 23px;
+height: 131px;
+left: 820px;
+top: 443px;
+
+background: #FFFFFF;
+/* Screenshot 2024-03-04 at 10.23 1 */
+position: absolute;
+width: 34px;
+height: 65px;
+left: 841px;
+top: 846px;
+
+background: url(Screenshot 2024-03-04 at 10.23.png);
+/* Screenshot 2024-03-04 at 10.24 1 */
+position: absolute;
+width: 85px;
+height: 28px;
+left: 66px;
+top: 883px;
+
+background: url(Screenshot 2024-03-04 at 10.24.png);
+/* To get detailed information and protection recommendation againts the sun, click on an area on the map or use search function below. */
+position: absolute;
+width: 1074px;
+height: 21px;
+left: 44px;
+top: 226px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #000000;
+/* Plan to go outside? Find the current UV level of locations inside Victoria. */
+position: absolute;
+width: 688px;
+height: 21px;
+left: 45px;
+top: 205px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #000000;
+/* Plan to go outside? Find the current UV level of locations inside Victoria. */
+position: absolute;
+width: 688px;
+height: 21px;
+left: 45px;
+top: 205px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #000000;
+/* Area name or Post Code */
+position: absolute;
+width: 145px;
+height: 22px;
+left: 44px;
+top: 263px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+
+color: #000000;
+/* Data as of Today, 5 March 2024, 08.00 AM */
+position: absolute;
+width: 345px;
+height: 23px;
+left: 40px;
+top: 934px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+color: #000000;
+/* Rectangle 4 */
+box-sizing: border-box;
+
+position: absolute;
+width: 197px;
+height: 36px;
+left: 201px;
+top: 256px;
+
+background: #F3F3F3;
+border: 1px solid #C6C6C6;
+border-radius: 25px;
+/* Clayton, 3168 */
+position: absolute;
+width: 145px;
+height: 22px;
+left: 227px;
+top: 264px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+
+color: #6E6E6E;
+/* Rectangle 12 */
+box-sizing: border-box;
+
+position: absolute;
+width: 408px;
+height: 594px;
+left: 951px;
+top: 317px;
+
+background: #FFFFFF;
+border: 1px solid #E4E4E4;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+/* Rectangle 10 */
+position: absolute;
+width: 64px;
+height: 63px;
+left: 989px;
+top: 681px;
+
+background: #1E9E97;
+border-radius: 4px;
+/* Rectangle 13 */
+position: absolute;
+width: 64px;
+height: 63px;
+left: 1079px;
+top: 681px;
+
+background: #1E9E97;
+border-radius: 4px;
+/* Rectangle 14 */
+position: absolute;
+width: 64px;
+height: 63px;
+left: 1169px;
+top: 681px;
+
+background: #1E9E97;
+border-radius: 4px;
+/* Rectangle 15 */
+position: absolute;
+width: 64px;
+height: 63px;
+left: 1259px;
+top: 681px;
+
+background: #1E9E97;
+border-radius: 4px;
+/* 30+ SPF */
+position: absolute;
+width: 62px;
+height: 45px;
+left: 991px;
+top: 684px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #FFFFFF;
+/* 20 */
+position: absolute;
+width: 62px;
+height: 24px;
+left: 1081px;
+top: 688px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #FFFFFF;
+/* MINUTES */
+position: absolute;
+width: 62px;
+height: 24px;
+left: 1080px;
+top: 717px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+/* 2 */
+position: absolute;
+width: 62px;
+height: 24px;
+left: 1261px;
+top: 688px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #FFFFFF;
+/* HOURS */
+position: absolute;
+width: 62px;
+height: 24px;
+left: 1260px;
+top: 717px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+/* 1 */
+position: absolute;
+width: 62px;
+height: 24px;
+left: 1168px;
+top: 683px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+
+color: #FFFFFF;
+/* TABLE */
+position: absolute;
+width: 62px;
+height: 13px;
+left: 1170px;
+top: 709px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+/* SPOON */
+position: absolute;
+width: 62px;
+height: 13px;
+left: 1170px;
+top: 722px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+text-align: center;
+
+color: #FFFFFF;
+/* Recommended Sunscreen Application */
+position: absolute;
+width: 313px;
+height: 18px;
+left: 999px;
+top: 647px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+/* Learn more on how to protect yourself and loved ones from the sun */
+position: absolute;
+width: 313px;
+height: 18px;
+left: 1000px;
+top: 811px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #000000;
+/* image 1 */
+position: absolute;
+width: 366px;
+height: 73px;
+left: 984px;
+top: 537px;
+
+background: url(image.png);
+/* Clayton, 3168, VIC */
+position: absolute;
+width: 187px;
+height: 33px;
+left: 1061px;
+top: 333px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+
+color: #000000;
+/* Sunscreen
+Lotion */
+position: absolute;
+width: 58px;
+height: 33px;
+left: 992px;
+top: 744px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+
+color: #000000;
+/* Before
+Activities */
+position: absolute;
+width: 58px;
+height: 33px;
+left: 1082px;
+top: 744px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+
+color: #000000;
+/* Per Limb and Face */
+position: absolute;
+width: 58px;
+height: 33px;
+left: 1172px;
+top: 744px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+
+color: #000000;
+/* Reapply */
+position: absolute;
+width: 58px;
+height: 33px;
+left: 1262px;
+top: 744px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+
+color: #000000;
+/* 7 Category : High */
+position: absolute;
+width: 181px;
+height: 73px;
+left: 1066px;
+top: 399px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+text-align: center;
+
+color: #FF0000;
+/* UV Level */
+position: absolute;
+width: 181px;
+height: 18px;
+left: 1064px;
+top: 388px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+/* Recommended Protection */
+position: absolute;
+width: 271px;
+height: 18px;
+left: 1021px;
+top: 513px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #000000;
+/* Line 2 */
+position: absolute;
+width: 373px;
+height: 0px;
+left: 969px;
+top: 372px;
+
+border: 1px solid #D0D0D0;
+/* Line 3 */
+position: absolute;
+width: 209px;
+height: 0px;
+left: 1052px;
+top: 497px;
+
+border: 1px solid #D0D0D0;
+/* Line 4 */
+position: absolute;
+width: 209px;
+height: 0px;
+left: 1052px;
+top: 631px;
+
+border: 1px solid #D0D0D0;
+/* Line 5 */
+position: absolute;
+width: 209px;
+height: 0px;
+left: 1051px;
+top: 788px;
+
+border: 1px solid #D0D0D0;
+/* Rectangle 16 */
+position: absolute;
+width: 116px;
+height: 36px;
+left: 1107px;
+top: 856px;
+
+background: #0300A8;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 9px;
+/* Learn More */
+position: absolute;
+width: 115px;
+height: 18px;
+left: 1107px;
+top: 865px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+text-align: center;
+
+color: #FFFFFF;
